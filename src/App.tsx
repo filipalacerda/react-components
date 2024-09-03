@@ -2,6 +2,7 @@
 import { css } from "@emotion/react";
 import ToggleButton from "./components/toggleButton";
 import Popover from "./components/popover";
+import Tooltip from "./components/tooltip";
 
 const Styles = {
   block: css({
@@ -33,6 +34,34 @@ function App() {
             content="I'm a popover"
             children="Click me top!"
             position="top"
+          />
+        </div>
+      </div>
+      <div css={Styles.block}>
+        <h5>Tooltip</h5>
+        <div css={Styles.innerBlock}>
+          <Tooltip
+            direction="top"
+            content="Top tooltip"
+            tooltip="I'm a tooltip!"
+          />
+
+          <Tooltip
+            direction="bottom"
+            content="Bottom tooltip"
+            tooltip="I'm a tooltip!"
+          />
+
+          <Tooltip
+            direction="right"
+            content="Right tooltip"
+            tooltip="I'm a tooltip!"
+          />
+
+          <Tooltip
+            direction="left"
+            content="Left tooltip"
+            tooltip="I'm a tooltip!"
           />
         </div>
       </div>
