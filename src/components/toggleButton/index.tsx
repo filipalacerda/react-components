@@ -35,7 +35,6 @@ const Styles = {
       left: "20px",
     },
   }),
-  off: css({}),
 };
 
 const ToggleButton = ({ isDisabled, onClick }: ToggleButtonProps) => {
@@ -49,7 +48,7 @@ const ToggleButton = ({ isDisabled, onClick }: ToggleButtonProps) => {
 
   return (
     <button
-      css={[Styles.root, isOn ? Styles.on : Styles.off]}
+      css={[Styles.root, isOn && Styles.on]}
       onClick={handleOnButtonClick}
       disabled={isDisabled}
     ></button>
